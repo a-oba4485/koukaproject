@@ -27,7 +27,9 @@
 </style>
 
 <h1>掲示板</h1>
+{% if user.is_authenticated %}
 <button><a href="{% url 'kouka:add_comment' %}">コメントを追加</a></button>
+{% endif %}
 <div class="contenter">
     <div class="content">
         <ul>

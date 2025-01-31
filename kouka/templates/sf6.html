@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}{% block contents %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>攻略サイト</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .contenter {
+            display: flex;
+            margin: 20px;
+        }
+        .content {
+            flex: 3;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            flex: 1;
+            margin-left: 20px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .video-section {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+<div class="contenter">
+    <div class="content">
+
+            <h2>ストリートファイター6（SF6)とは</h2>
+        
+            <p>ストリートファイター6（SF6）は、カプコンによって開発された最新の格闘ゲームで、ストリートファイターシリーズの第6作目です。シリーズの伝統を受け継ぎながらも、多くの新機能と改善を導入し、プレイヤーに新たな体験を提供しています。</p>
+        
+            <h3>新たなキャラクターと戻ってきた人気キャラ</h3>
+            <p>SF6では、新しいキャラクターが登場し、シリーズに新しい風を吹き込んでいます。例えば、ルークはその代表的な存在で、高いコンボ火力と素早いラッシュ、長い小技を駆使して戦うキャラクターとして人気があります。一方、リュウやチュンリーといったシリーズの人気キャラクターも健在で、プレイヤーは懐かしさを感じながらも、新たなスキルや技で彼らを操作する楽しさを味わえます。</p>
+        
+            <h3>グラフィックとアニメーションの進化</h3>
+            <p>SF6のグラフィックはシリーズの中でも最高峰に達しています。リアルなキャラクターモデルと滑らかなアニメーションが、対戦の臨場感を高めています。特に、必殺技のエフェクトやフィニッシュムーブの演出は目を見張るものがあり、プレイヤーは戦いの興奮をより一層感じることができます。</p>
+        
+            <h3>新しいゲームモードとオンライン対戦</h3>
+            <p>SF6には、新しいゲームモードが多数追加されています。例えば、「ストーリーモード」では、各キャラクターの背景やストーリーを深く掘り下げることができ、ファンにとっては見逃せない内容となっています。また、「アーケードモード」や「サバイバルモード」といった従来のモードも健在で、初心者から上級者まで楽しめる内容が充実しています。</p>
+            <p>さらに、オンライン対戦機能も強化されており、世界中のプレイヤーとリアルタイムで対戦することができます。ランキング戦やフレンドマッチを通じて、自分の腕前を試すことができ、コミュニティとの交流も深まります。</p>
+        
+            <h3>トレーニングモードの充実</h3>
+            <p>トレーニングモードも大幅に改良されており、新しいプレイヤーが基本操作やコンボを学びやすくなっています。様々なシチュエーションを想定した練習ができるため、自分の弱点を克服し、対戦スキルを磨くことができます。</p>
+        
+            <h3>まとめ</h3>
+            <p>ストリートファイター6は、シリーズの伝統を守りながらも、多くの新機能と改善を導入し、格闘ゲームの新たなスタンダードを打ち立てました。新しいキャラクター、進化したグラフィック、充実したゲームモードとトレーニング機能により、初心者から上級者まで幅広いプレイヤーが楽しめる作品となっています。</p>
+
+
+
+        </div>
+
+    <div class="sidebar">
+        <h2>掲載記事</h2>
+        <ul>
+            <li><a href="{% url 'kouka:photo_detail' 1 %}">ルークの使い方</a></li>
+            <li><a href="{% url 'kouka:photo_detail' 3 %}">パズドラについて</a></li>
+            <li><a href="{% url 'kouka:keijiban' %}">掲示板</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+{% endblock %}

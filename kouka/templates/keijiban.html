@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}掲示板{% endblock %}
+
+{% block contents %}
+
+<style>
+        .contenter {
+            display: flex;
+            margin: 20px;
+        }
+
+        .content {
+            flex: 3;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+    .sidebar {
+        flex: 1;
+        margin-left: 20px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<h1>掲示板</h1>
+<button><a href="{% url 'kouka:add_comment' %}">コメントを追加</a></button>
+<div class="contenter">
+    <div class="content">
+        <ul>
+            {% for comment in comments %}
+            <li>{{ comment.user }} ({{ comment.created_at }}): {{ comment.get_topic_display }}</li>
+            <p>{{ comment.text }}</p>
+            {% endfor %}
+        </ul>
+        
+    </div>
+    <div class="sidebar">
+        <h2>掲載記事</h2>
+        <ul>
+            <li><a href="{% url 'kouka:photo_detail' 1 %}">ルークの使い方</a></li>
+            <li><a href="{% url 'kouka:photo_detail' 2 %}">sf6とは</a></li>
+            <li><a href="{% url 'kouka:photo_detail' 3 %}">パズドラについて</a></li>
+ 
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

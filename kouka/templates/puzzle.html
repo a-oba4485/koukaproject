@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contents %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>攻略サイト</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .contenter {
+            display: flex;
+            margin: 20px;
+        }
+        .content {
+            flex: 3;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            flex: 1;
+            margin-left: 20px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .video-section {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+<div class="contenter">
+    <div class="content">
+
+        <h2>パズドラの魅力と最近のインフレについて</h2>
+        <p>パズル＆ドラゴンズ（通称パズドラ）は、2012年にリリースされて以来、多くのユーザーに愛され続けているモバイルゲームです。このゲームは、パズルとRPGの要素を融合させた斬新なゲームプレイで、多くのプレイヤーを魅了しています。</p>
+
+        <h3>パズドラの魅力</h3>
+        <p>パズドラの魅力は、何と言ってもその戦略性と多様性にあります。プレイヤーは、自分のモンスターを育成し、パズルを解いて敵を倒していきます。モンスターのスキルや属性を考慮しながら、最適なパーティを編成することが求められます。イベントやコラボレーションも頻繁に行われており、飽きることなく楽しめる要素が満載です。</p>
+
+        <h3>最近のインフレ</h3>
+        <div class="image-section">
+            <img src="{% static 'img\メディア (1).jpg' %}" alt="パズドラのインフレ">
+            <p>インフレの影響で新しいモンスターが次々と登場するパズドラ</p>
+        </div>
+        <p>しかし、最近のパズドラではインフレの傾向が顕著になってきています。新しいモンスターやスキルが次々と登場し、これに伴い既存のモンスターの価値が相対的に低下することが多くなっています。このインフレは、ゲームバランスに影響を与えると同時に、新規プレイヤーにとっては少し敷居が高く感じられるかもしれません。</p>
+        <p>一方で、このインフレを楽しむプレイヤーも多く、新しい戦略や強力なパーティを試す機会が増えることは、ゲームの一つの醍醐味とも言えます。開発者もこのバランスを保つために、定期的なアップデートやバランス調整を行っているため、これからの展開に期待が寄せられています。</p>
+
+        </div>
+
+    <div class="sidebar">
+        <h2>掲載記事</h2>
+        <ul>
+            <li><a href="{% url 'kouka:photo_detail' 2 %}">sf6とは</a></li>
+            <li><a href="{% url 'kouka:photo_detail' 1 %}">ルークの使い方</a></li>
+            <li><a href="{% url 'kouka:keijiban' %}">掲示板</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+{% endblock %}
